@@ -1,11 +1,4 @@
-# Deep learning for stock price prediction
-![주식_이미지](https://user-images.githubusercontent.com/76574427/139482743-d017ba50-dacd-4642-8560-29f2af7169b4.jpg)
-
-주가 예측은 힘들지만 금융산업에서 중요한 문제임.
-
-최근 딥러닝을 이용한 주가예측 알고리즘이 뛰어난 성능을 보이고 있음.  
-
-아래에는 딥러닝을 이용한 방식 중 AttentionLSTM, TransformerEncoder를 이용한 예측방식을 소개함.
+# Transformer for stock price prediction
 
 ## Installation
 - Install pytorch 
@@ -22,22 +15,11 @@
 
 
 ## Running
-run ```AttentionLSTM_main.py``` and ```transformer_main.py```.
+run ```main.py```.
 
 
 ## Output
 종목별 예측 결과, Time split별 결과와 그래프
-
-## AttentionLSTM
-
-본 방식은 EncoderDecoderLSTM에 Attrntion구조를 추가한 방식으로
-
-일반적인 LSTM의 Gradient Vanishing 문제를 보완하기 위해 개발 됨.
-
-- AttentionLSTM for one step ahead prediction
-
-![attLSTM](https://user-images.githubusercontent.com/76574427/139543299-e7b72728-6cc6-407b-899c-261314d958aa.PNG)
-
 
 
 ## TransformerEncoder
@@ -79,8 +61,13 @@ pandas_datareader를 이용하여 야후 파이낸스에 있는 데이터셋을 
 
 yahoofinance에서 제공되는 정보(Open, Close, High, Low, Volume, AdjClose)를 불러옴.
 
-## 예측 결과 예시
-
-코스닥 주가 데이터를 이용.
-
-![예측 결과 임지](https://user-images.githubusercontent.com/76574427/139482798-87decde6-a9b9-458d-9e58-f43469498780.png)
+## Citations
+```
+@InProceedings{Ashish Vaswani_2017_NIPS,
+author = {Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin},
+title = {Attention Is All You Need},
+booktitle = {Conference on Neural Information Processing Systems (NIPS 2017)},
+month = {December},
+year = {2017}
+}
+```
