@@ -60,3 +60,14 @@ self.data = pdr.get_data_yahoo(self.symbol, start=self.start, end=self.end)
 pandas_datareader를 이용하여 야후 파이낸스에 있는 데이터셋을 위와같은 방법으로 불러올 수 있음.
 
 yahoofinance에서 제공되는 정보(Open, Close, High, Low, Volume, AdjClose)를 불러옴.
+
+## Citations
+"""
+@InProceedings{Ashish Vaswani_2017_NIPS,
+author = {Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin},
+title = {Attention Is All You Need},
+booktitle = {Conference on Neural Information Processing Systems (NIPS 2017)},
+month = {December},
+year = {2017}
+}
+"""
