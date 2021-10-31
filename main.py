@@ -27,6 +27,7 @@ def train(transformer, partition, transformer_optimizer, loss_fn, args):
 
     transformer.train()
     transformer.zero_grad()
+    transformer_optimizer.zero_grad()
 
 
     not_used_data_len = len(partition['train']) % args.batch_size
@@ -34,6 +35,9 @@ def train(transformer, partition, transformer_optimizer, loss_fn, args):
     y_pred_graph = []
 
     for i, (X, y, min, max) in enumerate(trainloader):
+
+        transformer.zero_grad()
+        transformer_optimizer.zero_grad()
         ## (batch size, sequence length, input dim)
         ## x = (10, n, 6) >> x는 n일간의 input
         ## y= (10, m, 1) or (10, m)  >> y는 m일간의 종가를 동시에 예측
